@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Produits </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/StorageStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    
+</head>
+<body>
+
+    
+      
+        <div class="container">
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html"><h1>your Logo </h1></a>
+            </div>
+            <nav class="nnv">
+              <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produits.html">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="Account.html">Account</a></li>
+              </ul>
+            </nav>     
+           <!--a href="carte.html"><img src="image/cart.png" width="30px" height="30px"></a-->    
+            <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">      
+          </div>
+        </div>
+    
+<!-------single product details ----->
+
+<div class="small-container single-product">
+  <div class="row">
+    <div class="col-2">
+      <img src="image/gallery-1.jpg" width="100%" id="PrdImg">
+
+      <div class="small-img-row">
+         <div class="small-img-col">
+           <img src="image/gallery-1.jpg" width="100%" id="small-img0" onclick="click1()">
+         </div>
+         <div class="small-img-col">
+           <img src="image/gallery-2.jpg" width="100%" id="small-img1" onclick="click2()">
+         </div>
+         <div class="small-img-col">
+           <img src="image/gallery-3.jpg" width="100%" id="small-img2" onclick="click3()">
+         </div>
+         <div class="small-img-col">
+           <img src="image/gallery-4.jpg" width="100%" id="small-img3" onclick="click4()">
+         </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <p>Type de Produit</p>
+      <h1>Titre de Produit</h1>
+      <h4>000.00DH</h4>
+      <div class="rating">
+        <i class="fa fa-star" ></i>
+        <i class="fa fa-star" ></i>
+        <i class="fa fa-star-half-o" ></i>
+        <i class="fa fa-star-o" ></i>
+        <i class="fa fa-star-o" ></i>
+     </div>
+     <div class="demo" id="demo"><h2> </h2></div>
+      <a href="Information.html" class="btn">Demander </a>
+      <a href="https://wa.me/212658990239" target="blank" class="btn btn-W">Whatsapp</a>
+      <h3>Details de Produit <i class="fa fa-indent" ></i></h3>
+      <br>
+      <p> les informations de ce produit les informations de ce produit les informations de ce produit
+      les informations de ce produit les informations de ce produit les informations de ce produit</p>
+    </div>
+  </div>
+</div>
+
+<!----------title---------->
+
+<div class="small-container">
+  <div class="row row-2">
+    <h2>Realted Products</h2>
+    <a href="produits.html"><p>View more</p></a>
+    
+  </div>
+</div>
+
+
+
+
+
+<!----------products---------->
+<div class="small-container">
+  <div class="row">
+    <!--Liste des produite -->
+    <div class="col-4">
+      <a href="products-detailes.html"><img src="image/produit.jpg"></a>
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+    </div>
+
+    <div class="col-4">
+      <a href="products-detailes.html"><img src="image/produit.jpg"></a>
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+    </div>
+
+    <div class="col-4">
+      <a href="products-detailes.html"><img src="image/produit.jpg"></a>
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+    </div>
+
+    <div class="col-4">
+      <a href="products-detailes.html"><img src="image/produit.jpg"></a>
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      
+      <p>000.00DH</p>
+    </div>
+  </div>
+</div>
+
+<!-----Facebook commmentaire-->
+<div class="small-container">
+  <div class="row">
+    <div class="fb-cmt">
+          <input type="text" id="txtVal">
+          <button  onclick="addLi()">add</button>
+          <ul id="list">
+            <li>cmt1</li>
+            <li>cmt2</li>
+            <li>cmt3</li>
+          </ul>
+    </div>
+  </div>
+</div>
+
+<!------JS cmt fb-->
+<script type="text/javascript">
+  function addLi()
+  {
+      var txtVal=document.getElementById('txtVal').value ,
+  listNode=document.getElementById('list'),
+  liNode=document.createElement("LI"),
+  txtNode=document.createTextNode(txtVal);
+
+  liNode.appendChild(txtNode);
+  listNode.appendChild(liNode);
+  }
+
+
+</script>
+
+
+
+
+<!----- footer-------->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Telecharger notre App</h3>
+        <p>Telecharger app pour Android et ios telephone mobile</p>
+        <div class="app-logo">
+          <img src="image/play-store.png">
+          <img src="image/app-store.png">
+        </div>
+      </div>
+      <div class="footer-col-2">
+        <h1>your LOGO</h1>
+        <p>Telecharger app pour Android et ios telephone mobile Telecharger app pour Android et ios telephone mobile< Telecharger app pour Android et ios telephone mobile<</p>
+      </div>
+      <div class="footer-col-3">
+        <h3> Useful Links </h3>
+         <ul>
+           <li> Coupon</li>
+           <li>Blog Post </li>
+           <li>Return Policy </li>
+           <li>Join Affili </li>
+         </ul>
+      </div>
+      <div class="footer-col-4">
+        <h3> Follow Us</h3>
+         <ul>
+           <li> Facebook</li>
+           <li>Instagram </li>
+           <li>Youtube </li>
+         </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2020 - Nome de site</p>
+  </div>
+</div>
+<!-------------  js for toggle menu------------>
+<script type="text/javascript">
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight="0px";
+
+  function menutoggle(){
+    if (MenuItems.style.maxHeight=="0px") 
+    {
+      MenuItems.style.maxHeight="200px";
+    }
+    else
+    {
+      MenuItems.style.maxHeight="0px";
+    }
+  }
+</script>
+
+<!------- js for product gallery-------->
+<script  type="text/javascript">
+  var PrdImg = document.getElementById("PrdImg");
+  var SmallImg0 = document.getElementsByTagName("small-img-col");
+  var SmallImg1 = document.getElementById("small-img1");
+  var SmallImg2 = document.getElementById("small-img2");
+  var SmallImg3 = document.getElementById("small-img3");
+
+  function click1(){
+    PrdImg.src=SmallImg0.src;
+  }
+  function click2(){
+    PrdImg.src=SmallImg1.src;
+  }
+  function click3(){
+    PrdImg.src=SmallImg2.src;
+  }
+  function click4(){
+    PrdImg.src=SmallImg3.src;
+  }
+            
+         
+
+
+</script>
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Sep 17, 2020 00:30:25").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getTime();
+  
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+  
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+  
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+
+  <!-------------- Facebook Comnt-->
+  
+
+
+
+</body>
+</html>

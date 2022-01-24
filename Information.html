@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pannier </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/StorageStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>      
+        <div id="cnt1" class="container">
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html"><h1>your Logo </h1></a>
+            </div>
+            <nav class="nnv">
+              <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produits.html">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="Account.html">Account</a></li>
+              </ul>
+            </nav>     
+          <!--a href="carte.html"><img src="image/cart.png" width="30px" height="30px"></a-->  
+            <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">      
+          </div>
+        </div>
+<!-----------Account page-------->
+<div class="account-page " id="cnt2">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <img src="image/image1.png" width="100%">
+      </div>
+      <div class="col-2">
+        <div class="form-container">
+          <div class="form-btn">
+            <span>Informations</span>
+          </div>
+          <form id="Info">
+            <input id="Nom" type="text" placeholder="" title="Nom et Prenom">
+            <input id="ville" type="text" placeholder="" value="Ville">
+            <input id="tele" type="telephone" placeholder="" value="Telephone">
+            <p class="btn" onclick="openModal()">Demander</p>
+          </form>
+         
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="modal">
+    
+          
+    <div class="form-btn">
+      <span>Informations</span>
+    </div>
+    <div>
+    <h4 class="fermer" onclick="closemodal()">X</h4>
+    <img class="img-merci" src="image/merci.jpg" >
+    <h1>Votre demande sera prise en compte et nous vous répondrons </h1>
+    </div>
+    <script>
+var nom=document.getElementById('Nom').value.toString();
+var ville=document.getElementById('ville').value.toString();
+var tele=document.getElementById('tele').valuetoString();
+function openModal(){
+  if(nom==" " && ville==" " && tele==" "){
+      alert("saisir les informations ");
+      }else{
+        document.getElementById("modal").style.top="60px";
+      document.getElementById('cnt1').style.filter="blur(5px)";
+      document.getElementById('cnt2').style.filter="blur(5px)";
+      document.getElementById('cnt3').style.filter="blur(5px)";
+      }
+
+}
+function closemodal(){
+document.getElementById("modal").style.top=("-700px");
+      document.getElementById('cnt1').style.filter="blur(0px)";
+      document.getElementById('cnt2').style.filter="blur(0px)";
+      document.getElementById('cnt3').style.filter="blur(0px)";
+} 
+    </script>
+   
+    
+  
+
+</div>
+  
+
+
+
+        
+
+
+
+
+    
+
+
+<!----- footer-------->
+<div class="footer " id="cnt3">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Telecharger notre App</h3>
+        <p>Telecharger app pour Android et ios telephone mobile</p>
+        <div class="app-logo">
+          <img src="image/play-store.png">
+          <img src="image/app-store.png">
+        </div>
+      </div>
+      <div class="footer-col-2">
+        <h1>your LOGO</h1>
+        <p>Telecharger app pour Android et ios telephone mobile Telecharger app pour Android et ios telephone mobile< Telecharger app pour Android et ios telephone mobile<</p>
+      </div>
+      <div class="footer-col-3">
+        <h3> Useful Links </h3>
+         <ul>
+           <li> Coupon</li>
+           <li>Blog Post </li>
+           <li>Return Policy </li>
+           <li>Join Affili </li>
+         </ul>
+      </div>
+      <div class="footer-col-4">
+        <h3> Follow Us</h3>
+         <ul>
+           <li> Facebook</li>
+           <li>Instagram </li>
+           <li>Youtube </li>
+         </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2020 - Nome de site</p>
+  </div>
+</div>
+<!-------------  js for toggle menu------------>
+<script type="text/javascript">
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight="0px";
+
+  function menutoggle(){
+    if (MenuItems.style.maxHeight=="0px") 
+    {
+      MenuItems.style.maxHeight="200px";
+    }
+    else
+    {
+      MenuItems.style.maxHeight="0px";
+    }
+  }
+</script>
+</body>
+</html>

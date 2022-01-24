@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Produits </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/StorageStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    
+</head>
+<body>
+
+    
+      
+        <div class="container">
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html"><h1>your Logo </h1></a>
+            </div>
+            <nav class="nnv">
+              <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produits.html">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="Account.html">Account</a></li>
+              </ul>
+            </nav>     
+            <!--a href="carte.html"><img src="image/cart.png" width="30px" height="30px"></a-->   
+            <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">      
+          </div>
+      
+
+        </div>
+    
+
+<div class="small-container" id="addc">
+   <div class="row row-2">
+     <h2>Produits</h2>
+     <select>
+       <option>Trier par default</option>
+       <option>Trier par prix</option>
+       <option>Trier par popularité</option>
+       <option>Trier par évaluation</option>
+       <option>Trier par réduction</option>
+
+     </select>
+   </div>
+
+  <div class="row" id="addrow">
+    <!--Liste des produite -->
+    <div class="col-4 img-add">
+      <img onclick="openModal()" src="image/pngegg.png">
+      
+    </div>
+
+    <div class="col-4">
+      <img src="image/produit.jpg">
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+     <a href=""><p class="btn-m">Modifier</p></a>
+    </div>
+
+    <div class="col-4">
+      <img src="image/produit.jpg">
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+     <a href=""><p class="btn-m">Modifier</p></a>
+    </div>
+
+    <div class="col-4">
+      <img src="image/produit.jpg">
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+     <a href=""><p class="btn-m">Modifier</p></a>
+    </div>
+
+    <div class="col-4">
+      <img src="image/produit.jpg">
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+     <a href=""><p class="btn-m">Modifier</p></a>
+    </div>
+
+    <div class="col-4">
+      <img src="image/produit.jpg">
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+      <a href=""><p class="btn-m">Modifier</p></a>
+    </div>
+
+    <div class="col-4">
+      <img src="image/produit.jpg">
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+      <a href=""><p class="btn-m">Modifier</p></a>
+    </div>
+
+    <div class="col-4">
+      <img src="image/produit.jpg">
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+      <a href=""><p class="btn-m">Modifier</p></a>
+    </div>
+  </div>
+</div>
+
+<!----pop-up-->
+<div id="modal">                     
+              <h3 class="x" onclick="closemodal()">X</h3>
+            <form id="Info" enctype="multipart/form-data">
+              <input type="text" id="titre" placeholder="Nom de produits">
+              <input type="text" id="info" placeholder="Informations de produits">
+              <input type="number" id="prix" placeholder="Prix">
+              <input type="number" id="note" name="la Note de produit">
+              <input type="file" id="img1" name="image 1 de produit" class="add-img">
+             
+              
+              <h2 class="btn" onclick="addPro()">Ajouter</h2>
+            </form>
+            <script type="text/javascript">
+               function addPro(){
+                var titre= document.getElementById('titre').value;
+               var prix= document.getElementById('prix').value;
+               var note= document.getElementById('note').value;
+               var info= document.getElementById('img1').value;
+               cnt ="<div class='col-4'><img src='"+info+"'>"
+               +"<h4>"+titre+"</h4>"
+               +"<div class='rating'><i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i></div>"
+               +"<p>"+prix+" DH</p>"
+               +"<a href=''><p class='btn-m'>Modifier</p></a>"
+               +"</div>";
+               document.getElementById('addrow').innerHTML=document.getElementById('addrow').innerHTML+cnt;
+               }
+               /*
+               <div class="col-4">
+      <img src="image/produit.jpg">
+      <h4>Produit</h4>
+      <div class="rating">
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star-half-o" ></i>
+            <i class="fa fa-star-o" ></i>
+            <i class="fa fa-star-o" ></i>
+      </div>
+      <p>000.00DH</p>
+     <a href=""><p class="btn-m">Modifier</p></a>
+    </div>
+               */
+            
+            </script>
+
+<script>
+// var Titre=document.getElementById("titre").value;
+// var Info=document.getElementById("info").value;
+// var Prix=document.getElementById("prix").value;
+// var Note=document.getElementById("note").value;
+// var Img=document.getElementById("img1").value;
+        
+function openModal(){
+  document.getElementById("modal").style.top="50px";
+  document.body.blur(); 
+}
+function ajouter(){
+  //var txtp=document.getElementById('txt').value;
+  var txtres = document.getElementById('txt').value;
+  var txt =" nom : "+document.getElementById('titre').value+
+  " info : "+document.getElementById('info').value+
+  " prix :"+document.getElementById('prix').value+
+  " note :"+document.getElementById('note').value;
+
+
+
+}
+function closemodal(){
+  document.getElementById("modal").style.top=("-800px");
+  var titre= document.getElementById('titre').value.innerHTML=" ";
+  var info= document.getElementById('info').value.innerHTML=" ";
+  var prix= document.getElementById('prix').value.innerHTML=0;
+  var note= document.getElementById('note').value.innerHTML=0;
+  
+
+      } 
+            </script>
+           
+            
+          
+     
+</div>
+
+
+
+
+
+<!----- footer-------->
+<!--div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>Telecharger notre App</h3>
+        <p>Telecharger app pour Android et ios telephone mobile</p>
+        <div class="app-logo">
+          <img src="image/play-store.png">
+          <img src="image/app-store.png">
+        </div>
+      </div>
+      <div class="footer-col-2">
+        <h1>your LOGO</h1>
+        <p>Telecharger app pour Android et ios telephone mobile Telecharger app pour Android et ios telephone mobile< Telecharger app pour Android et ios telephone mobile<</p>
+      </div>
+      <div class="footer-col-3">
+        <h3> Useful Links </h3>
+         <ul>
+           <li> Coupon</li>
+           <li>Blog Post </li>
+           <li>Return Policy </li>
+           <li>Join Affili </li>
+         </ul>
+      </div>
+      <div class="footer-col-4">
+        <h3> Follow Us</h3>
+         <ul>
+           <li> Facebook</li>
+           <li>Instagram </li>
+           <li>Youtube </li>
+         </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2020 - Nome de site</p>
+  </div>
+</div-->
+<!-------------  js for toggle menu------------>
+<script type="text/javascript">
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight="0px";
+
+  function menutoggle(){
+    if (MenuItems.style.maxHeight=="0px") 
+    {
+      MenuItems.style.maxHeight="200px";
+    }
+    else
+    {
+      MenuItems.style.maxHeight="0px";
+    }
+  }
+</script>
+
+ 
+
+
+
+</body>
+</html>

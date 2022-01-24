@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .formulaire {
+            border: 3px solid tomato;
+            align-items: center;
+
+
+        }
+
+        .row {
+            padding: 25px;
+            margin-left: 15%;
+            margin-right: 15%;
+
+
+        }
+
+        .btn {
+            width: 80px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: tomato;
+        }
+
+        #newdiv {
+            background-color: tomato;
+            padding: 10px;
+            width: 100%;
+            ;
+            margin: 10px;
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .secdiv {
+            width: 200px;
+            padding: 10px;
+            background-color: black;
+            margin: 10px;
+            color: white;
+
+        }
+
+        .Iimg {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <pre>
+            <form class="formulaire" id="detail"  enctype="multipart/form-data">
+  Nom de produit:  <input type="text" id="titre">
+    
+  Information   :  <input type="text" id="info" name="info">
+    
+   Prix          :  <input type="number" id="prix">
+    
+   Note          :  <input type="number" id="note" name="note">
+    
+   Image         :  <input type="file" id="Mimg">
+                      
+               <input class="btn" type="button" value="Ajouter" onclick="add()">
+            </form>
+        </pre>
+    </div>
+
+    <div id="newdiv">
+        <div class="secdiv">
+            <a href="products-detailes.html"><img class="Iimg" src="image/produit.jpg"></a>
+            <h4>Produit</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>300.00DH</p>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+        // function add(){
+        //     var titre=document.getElementById('titre').value;
+        //     var prix=document.getElementById('prix').value;
+        //     var note=document.getElementById('note').value;
+        //     var Image=document.getElementById('Mimg').value;
+        //     alert(Image);
+        //     var cnt="<div class='secdiv'>"
+        //         +"<a href='products-detailes.html'><img class='Iimg' src='"+Image+"'></a>"
+        //         +"<h4>"+titre+"</h4>"
+        //         +"<div class='rating'>"
+        //         +"<i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i></div>"
+        //         +"<p>"+prix+"</p></div>";
+
+        //     document.getElementById('newdiv').innerHTML=document.getElementById('newdiv').innerHTML+cnt;
+        // } 
+
+
+
+
+
+
+        let newdiv = document.createElement('div');
+        function add() {
+            var form1=document.getElementById('detail').elements;
+            console.log(form1["note"].value);
+           // console.log(JSON.stringify(document.forms[0].note));
+            let secdiv = document.createElement('div'); let etodiv = document.createElement('div');
+            let titre = document.createElement('h4'); let prix = document.createElement('p');
+            let ist1 = document.createElement('i'); let ist2 = document.createElement('i'); let ist3 = document.createElement('i');
+            let ist4 = document.createElement('i'); let ist5 = document.createElement('i');
+            //let aa=document.createElement('');
+            newdiv.className = 'newdiv';
+            secdiv.className = 'secdiv';
+            etodiv.className = 'rating';
+            //*****************************************
+            var Limg = document.createElement('img');
+            Limg.className = 'Iimg';
+            //Limg.src = document.getElementById('Mimg');
+            alert(document.getElementById('Mimg').value);
+            //***********************************
+            
+            document.body.appendChild(newdiv);
+            newdiv.appendChild(secdiv);
+            secdiv.appendChild(Limg);
+            secdiv.appendChild(titre);
+            secdiv.appendChild(etodiv);
+            etodiv.appendChild(ist1);
+            etodiv.appendChild(ist2);
+            etodiv.appendChild(ist3);
+            etodiv.appendChild(ist4);
+            etodiv.appendChild(ist5);
+            secdiv.appendChild(prix);
+            var textPro = document.createTextNode(document.getElementById('titre').value);
+            var textPrix = document.createTextNode(document.getElementById('prix').value + ' DH');
+            titre.appendChild(textPro);
+            prix.appendChild(textPrix);
+
+            // var note = document.getElementById('note').value;
+            var note =form1["note"].value;
+
+            ist1.className = ist2.className = ist3.className = ist4.className = ist5.className = 'fa fa-star-o';
+            if (note == 1) {
+                ist1.className = 'fa fa-star-half-o';
+                ist2.className = ist3.className = ist4.className = ist5.className = 'fa fa-star-o';
+            }
+            if (note == 2) {
+                ist1.className = 'fa fa-star';
+                ist2.className = ist3.className = ist4.className = ist5.className = 'fa fa-star-o';
+            }
+            if (note == 3) {
+                ist1.className = 'fa fa-star';
+                ist2.className = 'fa fa-star-half-o';
+                ist3.className = ist4.className = ist5.className = 'fa fa-star-o';
+            }
+            if (note == 4) {
+                ist1.className = ist2.className = 'fa fa-star';
+                ist3.className = ist4.className = ist5.className = 'fa fa-star-o';
+            }
+            if (note == 5) {
+                ist1.className = ist2.className = 'fa fa-star';
+                ist3.className = 'fa fa-star-half-o';
+                ist4.className = ist5.className = 'fa fa-star-o';
+            }
+            if (note == 6) {
+                ist1.className = ist2.className = ist3.className = 'fa fa-star';
+                ist4.className = ist5.className = 'fa fa-star-o';
+            }
+            if (note == 7) {
+                ist1.className = ist2.className = ist3.className = 'fa fa-star';
+                ist4.className = 'fa fa-star-half-o';
+                ist5.className = 'fa fa-star-o';
+            }
+            if (note == 8) {
+                ist1.className = ist2.className = ist3.className = ist4.className = 'fa fa-star';
+                ist5.className = 'fa fa-star-o';
+            }
+            if (note == 9) {
+                ist1.className = ist2.className = ist3.className = ist4.className = 'fa fa-star';
+                ist5.className = 'fa fa-star-half-o';
+            }
+            if (note == 10) { ist1.className = ist2.className = ist3.className = ist4.className = ist5.className = 'fa fa-star'; }
+
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
